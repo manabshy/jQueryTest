@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Developer Test</title>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="jquery.doLogging.js">//</script>
+  <link rel="stylesheet" src="http://normalize-css.googlecode.com/svn/trunk/normalize.min.css" />
+  <style>
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+  }
+    .container{
+      width: 600px;
+      margin: 0 auto;
+    }
+    .slim{
+      margin:0;
+      padding: 0;
+    }
+  .objective{
+    width: 80%;
+    margin: 5px auto;
+    padding:5px 20px;
+    background-color: #eee;
+  }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Developer Test</h1>
+    <p>This page is using a jQuery plug-in (see: <a href="jquery.doLogging.js" target="_blank">jquery.doLogging.js</a>). <b>The plugin has not got any bugs in it.</b></p>
+    <p>
+      <h3 class="slim">Abstract</h3>
+      The click event is not being bound properly. If the plug-in is implemented correctly you will see the word 'Success' being logged to the console every time you click a link. Read this line again!
+    </p>
+    <div class="objective">
+      <p>
+        <strong>Objective 1:</strong><br />
+        <ul>
+          <li>Implement the plug-in correctly so you observe the behaviour described in the <b>Abstract</b>.</li>
+        </ul>
+      </p>
+    </div>
+    <div class="objective">
+      <p>
+        <strong>Objective 2:</strong><br />
+        <ul>
+          <li>Amend the console output to include the value of the attribute currently named data-log. This task requires you to make a change in the <a href="jquery.doLogging.js" target="_blank">jquery.doLogging.js</a> plugin file. <br/><br/><b>Example:</b> <i>'Success /link1/subfolder/'</i></li>
+        </ul>
+
+      </p>
+    </div>
+    <div class="objective">
+      <strong>START HERE ->>></strong> <a href="SourceCode.zip">Source Code</a>
+    </div>
+    <div class="objective">
+      <p>
+        <strong>What NOT to do:</strong><br />
+        Do not write your own selector to bind the event:
+        <pre>
+          $('a').on('click', function(e){
+            e.preventDefault();
+            console.log('Success');
+          });
+        </pre>
+      </p>
+      <p>
+        <strong>IMPLEMENT THE PLUG-IN!</strong>
+      <p/>
+    </div>
+    <p>
+      <strong>Note:</strong><br />
+      There is more than one solution here. Feel free to submit multiple solutions in separate HTML / JS files.
+    </p>
+
+    <h3>Clicking the links below should log to the console.</h3>
+    <ul>
+      <li><a href="#nogo" data-log="/link1/">Google.co.uk</a></li>
+      <li><a href="#nogo" data-log="/link2/subfolder/">Google.co.uk</a></li>
+      <li><a href="#nogo" data-log="/link3/subfolder/">Google.co.uk</a></li>
+      <li><a href="#nogo" data-log="/link4/subfolder/">Google.co.uk</a></li>
+    </ul>
+  </div>
+  <script>
+    $(function () {
+      /**
+       * Bind doLogging.
+       */
+      $('[data-log]').doLogging({
+        loggingattr: "data-trackme"
+      });
+    });
+    </script>
+
+</body>
+</html>
