@@ -1,7 +1,5 @@
 # Developer JavaScript Test
 
-[toc]
-
 This page is using a jQuery plug-in (see: jquery.doLogging.js). The plugin has not got any bugs in it.
 
 ### Abstract
