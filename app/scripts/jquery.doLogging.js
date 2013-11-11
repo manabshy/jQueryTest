@@ -12,8 +12,10 @@
     base.$el = $(el);
     base.el = el;
 
+    var xx = '';
+
     $.doLogging.defaultOptions = {
-      loggingattr: "data-log"
+      loggingattr: 'data-log'
     };
     /**
      * [init description]
@@ -27,7 +29,7 @@
      * [addLoggingEvents description]
      */
     base.addLoggingEvents = function () {
-      if (base.$el.attr('logged') !== "true" && base.$el.attr(base.options.loggingattr)) {
+      if (base.$el.attr('logged') !== 'true' && base.$el.attr(base.options.loggingattr)) {
         base.$el.click(base.triggerLog);
         base.$el.attr('logged', 'true');
       }
@@ -40,7 +42,7 @@
     base.triggerLog = function (e) {
       e.preventDefault();
       var loggingURL = base.$el.attr(base.options.loggingattr);
-      if (typeof doLogging === "function" && loggingURL !== "") {
+      if (typeof doLogging === 'function' && loggingURL !== '') {
         doLogging(loggingURL);
       }
     };
