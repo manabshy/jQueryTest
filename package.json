@@ -1,11 +1,8 @@
 {
   "name": "developer-js-test",
   "version": "0.0.0",
-  "description": "A simple test",
-  "main": "jquery.doLogging.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "A simple jQuery test",
+  "main": "index.html",
   "repository": {
     "type": "git",
     "url": "https://cleargif@github.com/cleargif/developer-js-test.git"
