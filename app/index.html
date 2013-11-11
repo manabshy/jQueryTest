@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Developer Test</title>
-  <script src="/scripts/vendor/jquery.min.js"></script>
+  <script src="/scripts/vendor/jquery/jquery.min.js"></script>
+  <script src="/scripts/vendor/prismjs/prism.js"></script>
+
   <script src="/scripts/jquery.doLogging.js">//</script>
-  <link rel="stylesheet" src="/scripts/vendor/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/scripts/vendor/bootstrap/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/scripts/vendor/prismjs/prism.css" />
   <style>
   body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -14,7 +17,7 @@
     color: #333333;
   }
     .container{
-      width: 600px;
+      width: 750px;
       margin: 0 auto;
     }
     .slim{
@@ -39,7 +42,10 @@
       <h3 class="slim">Abstract</h3>
       The click event is not being bound properly. If the plug-in is implemented correctly you will see the word 'Success' being logged to the console every time you click a link. Read this line again!
     </p>
-    <div class="objective">
+
+    <div class="line">
+      <div class="unit size1of2">
+        <div class="objective">
       <p>
         <strong>Objective 1:</strong><br />
         <ul>
@@ -47,7 +53,9 @@
         </ul>
       </p>
     </div>
-    <div class="objective">
+      </div>
+      <div class="unit size1of2 lastUnit">
+        <div class="objective">
       <p>
         <strong>Objective 2:</strong><br />
         <ul>
@@ -56,22 +64,24 @@
 
       </p>
     </div>
-    <div class="objective">
-      Get started: Clone the Repo form GIT.
+      </div>
     </div>
+
+
     <div class="objective">
       <p>
         <strong>What NOT to do:</strong><br />
         Do not write your own selector to bind the event:
-        <pre>
-          $('a').on('click', function(e){
-            e.preventDefault();
-            console.log('Success');
-          });
-        </pre>
+<pre><code class="language-javascript">$('a').on('click', function(e){
+  e.preventDefault();
+  console.log('Success');
+});</code>
+</pre>
       </p>
       <p>
-        <strong>IMPLEMENT THE PLUG-IN!</strong>
+        <strong>IMPLEMENT THE PLUG-IN!</strong><br />
+        Clone the repo to get started.<br />
+        <a href="https://github.com/cleargif/developer-js-test">https://github.com/cleargif/developer-js-test</a>
       <p/>
     </div>
     <p>
@@ -87,6 +97,7 @@
       <li><a href="#nogo" data-log="/link4/subfolder/">Google.co.uk</a></li>
     </ul>
   </div>
+
   <script>
     $(function () {
       /**
