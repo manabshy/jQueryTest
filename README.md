@@ -1,3 +1,16 @@
+# Getting Started
+- Clone this repo
+
+# Installation
+    bower install
+
+    npm install
+
+# Local environment
+
+  grunt server
+
+
 # Developer JavaScript Test
 
 This page is using a jQuery plug-in (see: jquery.doLogging.js). The plugin has not got any bugs in it.
