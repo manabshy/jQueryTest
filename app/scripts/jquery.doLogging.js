@@ -29,8 +29,11 @@
      * [addLoggingEvents description]
      */
     base.addLoggingEvents = function () {
+      
       if (base.$el.attr('logged') !== 'true' && base.$el.attr(base.options.loggingattr)) {
+        //console.log("Value:%s",base.options.loggingattr);
         base.$el.click(base.triggerLog);
+
         base.$el.attr('logged', 'true');
       }
     };
@@ -43,6 +46,8 @@
       e.preventDefault();
       var loggingURL = base.$el.attr(base.options.loggingattr);
       if (typeof doLogging === 'function' && loggingURL !== '') {
+
+        console.log("Link Value:%s",base.$el.attr(base.options.loggingattr));
         doLogging(loggingURL);
       }
     };
@@ -66,4 +71,5 @@
  */
 function doLogging() {
   console.log('Success');
+  //console.log(base.$el.attr(base.options.loggingattr));
 }
